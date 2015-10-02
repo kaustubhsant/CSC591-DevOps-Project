@@ -55,3 +55,9 @@ The deveops-master build job is triggered when a git push is done on master bran
 Email notification is sent on build job success and failure both.
 
 ![image](/docs/M1-buildstart.gif)
+
+###Build History screenshot
+----------------------------------------------------------------------------
+Build history is displayed in the Jenkins and can be easily tracked.
+
+![iamge](/docs/buildhistory.png)
