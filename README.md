@@ -21,3 +21,8 @@ Repo for DevOps course Project
 
 ![image](https://cloud.githubusercontent.com/assets/13971455/10237708/6cdeb1e4-6883-11e5-9959-a6b58765cf41.gif)
 
+##Screencast For Integration with Git Repo:
+----------------------------------------------------------------------------
+1. Add jenkin-webhook with the github repository.
+
+![image](https://cloud.githubusercontent.com/assets/10897707/10238884/7449cca6-6893-11e5-9cb2-c3e4558dec85.gif)
