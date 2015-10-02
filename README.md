@@ -1,7 +1,7 @@
 # CSC591-DevOps-Project
 Repo for DevOps course Project
 
-##Screencast of Demonstrating Jenkins Setup:
+##Screencast Demonstrating Jenkins Setup:
 ----------------------------------------------------------------------------
 1. Launch AWS EC2 instance
 2. Install Jenkins
