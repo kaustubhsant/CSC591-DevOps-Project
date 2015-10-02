@@ -2,9 +2,7 @@
 Repo for DevOps course Project
 
 ##Team:
-Kaustubh Sant - ksant
-Aditya Ambre - abambre
-Vishaka Narvekar - vsnarvek
+ksant, abambre, vsnarvek
 
 ##Code Repo:
 --------------------------------------------------------------------------
