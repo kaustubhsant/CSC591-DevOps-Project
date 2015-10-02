@@ -2,13 +2,14 @@
 Repo for DevOps course Project
 
 ##Team:
-- {ksant , vsnarvek , abambre }@ncsu.edu
-
+Kaustubh Sant 
+Aditya Ambre
+Vishaka Narvekar
 
 ##Code Repo:
 --------------------------------------------------------------------------
 
-Application Repository used :  'https://github.com/kaustubhsant/saws/'
+Application Repository used :  https://github.com/kaustubhsant/saws/
 
 ##Build Section:
 --------------------------------------------------------------------------
@@ -46,3 +47,11 @@ We are using Jenkin server hosted on EC2 instance, as our continous integration 
 1. Add jenkin-webhook with the github repository.
 
 ![image](https://cloud.githubusercontent.com/assets/10897707/10238884/7449cca6-6893-11e5-9cb2-c3e4558dec85.gif)
+
+###Screencast of Demonstarting Jenkins build jobs triggered via Git push:
+----------------------------------------------------------------------------
+The devops-develop build job is triggered when a git push is done on develop branch.
+The deveops-master build job is triggered when a git push is done on master branch.
+Email notification is sent on build job success and failure both.
+
+![image](/docs/M1-buildstart.gif)
