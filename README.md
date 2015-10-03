@@ -55,10 +55,10 @@ The deveops-master build job is triggered when a git push is done on master bran
 Email notification is sent on build job success and failure both.
 The build script is [here](/scripts/build.sh) and the unittest script to test if all dependencies are installed is [here](/scripts/test_dependencies.py).
 
-![image](/docs/M1-buildstart.gif)
+![image](/images/M1-buildstart.gif)
 
 ###Build History screenshot
 ----------------------------------------------------------------------------
 Build history is displayed in the Jenkins and can be easily tracked.
 
-![iamge](/docs/buildhistory.png)
+![iamge](/images/buildhistory.png)
