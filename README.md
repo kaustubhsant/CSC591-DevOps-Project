@@ -26,6 +26,7 @@ We are using Jenkin server hosted on EC2 instance, as our continous integration 
 2. Install Jenkins
     - Install Jenkins dependency and start Jenkins.
     - Install proxy which can redirect calls to Jenkin Service End points.
+    - The jenkins setup script is [here](/scripts/jenkins-build.sh).
 
 ![image](https://cloud.githubusercontent.com/assets/10897707/10238075/37202cb8-6888-11e5-9d72-15484b998875.gif)
 
@@ -37,6 +38,7 @@ We are using Jenkin server hosted on EC2 instance, as our continous integration 
 4. Add workspace clean plugin
 5. Create new job for master branch
 6. Create new job for develop branch
+The jenkins job config xml is [here](/config/config.xml).
 
 ![image](https://cloud.githubusercontent.com/assets/13971455/10237708/6cdeb1e4-6883-11e5-9959-a6b58765cf41.gif)
 
@@ -51,6 +53,7 @@ We are using Jenkin server hosted on EC2 instance, as our continous integration 
 The devops-develop build job is triggered when a git push is done on develop branch.
 The deveops-master build job is triggered when a git push is done on master branch.
 Email notification is sent on build job success and failure both.
+The build script is [here](/script/build.sh) and the unittest script to test if all dependencies are installed is [here](/scripts/test_dependencies.py).
 
 ![image](/docs/M1-buildstart.gif)
 
