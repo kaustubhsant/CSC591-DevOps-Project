@@ -1,5 +1,4 @@
-# CSC591-DevOps-Project
-Repo for DevOps course Project
+# Milestone 1
 
 ##Team:
 ksant, abambre, vsnarvek
