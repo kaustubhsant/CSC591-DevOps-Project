@@ -66,6 +66,6 @@ Build history is displayed in the Jenkins and can be easily tracked.
 ###Contribution
 --------------------------------------------------------------------------
 
-Jenkins setup on EC2 instance and configuring Git webhook.  - abambre / ksant
-Handled the jenkins configuration to create build jobs. -  vsnarvek / ksant
-Handled the build and unittest script and testing the build system.  - ksant /abambre
+-  Jenkins setup on EC2 instance and configuring Git webhook.  - abambre / ksant
+-  Handled the jenkins configuration to create build jobs. -  vsnarvek / ksant
+-  Handled the build and unittest script and testing the build system.  - ksant /abambre
