@@ -38,6 +38,7 @@ We are using Jenkin server hosted on EC2 instance, as our continous integration 
 4. Add workspace clean plugin
 5. Create new job for master branch
 6. Create new job for develop branch
+
 The jenkins job config xml is [here](/config/config.xml).
 
 ![image](https://cloud.githubusercontent.com/assets/13971455/10237708/6cdeb1e4-6883-11e5-9959-a6b58765cf41.gif)
@@ -53,7 +54,7 @@ The jenkins job config xml is [here](/config/config.xml).
 The devops-develop build job is triggered when a git push is done on develop branch.
 The deveops-master build job is triggered when a git push is done on master branch.
 Email notification is sent on build job success and failure both.
-The build script is [here](/script/build.sh) and the unittest script to test if all dependencies are installed is [here](/scripts/test_dependencies.py).
+The build script is [here](/scripts/build.sh) and the unittest script to test if all dependencies are installed is [here](/scripts/test_dependencies.py).
 
 ![image](/docs/M1-buildstart.gif)
 
