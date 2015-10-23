@@ -90,6 +90,9 @@ The Violations plugin reads these results and outputs in Jenkins as shown below.
 
 For this goal, we have written a [custom analysis tool](/scripts/custom-analysis.py). This tool parses the python code and checks if all the classes in the files have a *constructor(init)* function defined in them. It outputs the class names in which there is no constructor defined.
 
+![image](/images/custom-analysis.png)
+
+
 ###Goal 5
 **_Using hooks or post-build scripts, have the ability to reject a commit if it fails a minimum testing criteria._**
 
