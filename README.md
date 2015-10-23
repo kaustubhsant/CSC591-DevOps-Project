@@ -16,12 +16,10 @@ Application Repository used :  https://github.com/kaustubhsant/saws/
 The ability to run unit tests, measure coverage, and report the results.
 
 1. Running unit test:
-    
-    '''
+    ```
         python tests/run_tests.py
-    '''
-
-    'run_tests.py' calls all the containing the unit tests for the application.
+    ```
+    'run_tests.py' calls all the unit tests of this application.
 
 2. Measure code coverage:
       Using python 'coverage' library, 
