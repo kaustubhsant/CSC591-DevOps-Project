@@ -13,7 +13,7 @@ Application Repository used :  https://github.com/kaustubhsant/saws/
 
 ###Test Goal 1 :
     
-The ability to run unit tests, measure coverage, and report the results.
+"The ability to run unit tests, measure coverage, and report the results."
 
 1. Running unit test:
     ```
@@ -34,3 +34,10 @@ The ability to run unit tests, measure coverage, and report the results.
 1. On successfule execution of test-cases and coverage.
 
 ![image](/images/anim.gif)
+
+
+###Test Goal 4 :
+
+"The ability to extend an existing analysis tool or Introduce a data-flow analysis."
+
+In this milestone, we have added data-flow analysis tool
