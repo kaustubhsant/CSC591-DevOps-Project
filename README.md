@@ -31,4 +31,6 @@ The ability to run unit tests, measure coverage, and report the results.
 
 ###Screencast for goal 1:
 
+1. On successfule execution of test-cases and coverage.
+
 ![image](/images/anim.gif)
