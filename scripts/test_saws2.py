@@ -32,7 +32,7 @@ class SawsTest(unittest.TestCase):
     def setUp(self):
         self.file_name = os.path.expanduser('~') + '/' + '.saws.log'
         # creating object with default args
-		self.saws = Saws(refresh_resources=True)  
+	self.saws = Saws(refresh_resources=True)  
         self.DOCS_HOME_URL = 'http://docs.aws.amazon.com/cli/latest/reference/index.html'
 
     @mock.patch('saws.saws.click')
