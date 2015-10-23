@@ -8,7 +8,7 @@ ksant, abambre, vsnarvek
 
 Application Repository used :  https://github.com/kaustubhsant/saws/
 
-##Test MileStone:
+##Test:
 --------------------------------------------------------------------------
 
 ###Test Goal 1 :
