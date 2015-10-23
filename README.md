@@ -40,4 +40,7 @@ Application Repository used :  https://github.com/kaustubhsant/saws/
 
 "The ability to extend an existing analysis tool or Introduce a data-flow analysis."
 
-In this milestone, we have added data-flow analysis tool
+In this milestone, we have added data-flow analysis tool 'pyntch' which examines a source code and infers all possible types of variables, attributes, function arguments. Then it detects possible exceptions caused by type mismatch, attribute not found, or other types of exceptions raised from each function.
+
+![image](/images/pytch_error.png)
+
