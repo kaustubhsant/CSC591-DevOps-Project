@@ -15,7 +15,10 @@ class ConstructorAnalyser:
 	def parse(self,infile):
 		with open(infile) as fd:
 			file_contents = fd.read()
-		self.module = ast.parse(file_contents)
+		try:
+			self.module = ast.parse(file_contents)
+		except:
+			return None
 
 	def check_for_constructor(self,infile):
 		self.parse(infile)
@@ -30,4 +33,6 @@ class ConstructorAnalyser:
 		
 if __name__ == "__main__":
 	analyser = ConstructorAnalyser()
-	analyser.check_for_constructor(sys.argv[1])
+	for root,dirnames,files in os.walk(sys.argv[1]):
+		for f in files:
+			analyser.check_for_constructor(os.path.join(root,f))
