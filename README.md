@@ -20,8 +20,9 @@ The ability to run unit tests, measure coverage, and report the results.
 
 2. Measure code coverage:
       Using python 'coverage' library, 
-          1. It will run the coverage.
-          2. Create report for cobertura jenkins plugin as well as the html report.
+
+        1. It will run the coverage.
+        2. Create report for cobertura jenkins plugin as well as the html report.
 
 3. Display the report result:
       1. Cobertura jenkins plugin will display the coverage report.
