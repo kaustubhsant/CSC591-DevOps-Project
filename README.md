@@ -75,13 +75,13 @@ The statement is covered after adding test_saws2.py
 For this goal, we are using the following:
 
    1. [pylint](http://www.pylint.org/) for static source code analysis  
-   2. [Voilations](https://wiki.jenkins-ci.org/display/JENKINS/Violations) plugin in Jenkins to report the results 
+   2. [Violations](https://wiki.jenkins-ci.org/display/JENKINS/Violations) plugin in Jenkins to report the results 
 
-We are parsing the results obtained by running pylint on our target project and converting them to a format which the Voilations plugin in Jenkins can read from.
+We are parsing the results obtained by running pylint on our target project and converting them to a format which the Violations plugin in Jenkins can read from.
 	
 	pylint -f parseable -d I0011,R0801 saws | tee pylint.out 
 
-The Voilations plugin reads these results and outputs in Jenkins as shown below.
+The Violations plugin reads these results and outputs in Jenkins as shown below.
 
 ![image](/images/pylint-voilations.png)
 
@@ -95,8 +95,8 @@ For this goal, we have written a [custom analysis tool](/scripts/custom-analysis
 
 For this goal, we are changing the build status to failure when
 
-	1. any test cases fail
-	2. coverage goes below certain threshold
+   1. any test cases fail
+   2. coverage goes below certain threshold
 
 and sending an email notification informing the developer to revert the changes.
 
