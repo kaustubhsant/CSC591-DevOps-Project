@@ -22,8 +22,7 @@ The ability to run unit tests, measure coverage, and report the results.
     'run_tests.py' calls all the unit tests of this application.
 
 2. Measure code coverage:
-      Using python 'coverage' library, 
-
+    Using python 'coverage' library,
         1. It will run the coverage.
         2. Create report for cobertura jenkins plugin as well as the html report.
 
