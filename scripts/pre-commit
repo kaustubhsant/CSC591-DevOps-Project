@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Get all the files in the current diff 
+
+# Check whether any of the files have extension .pem/.key/.ppk
+
+#diff_files=`git diff --cached --name-status | awk '$1 != "R" { print $2 }'`
+
+total_count=`git diff --cached --name-status | awk '$1 != "D" { print $2 }' | grep '.pem$\|.ppk$\|.key$' |wc -l` 
+
+
+if [ $total_count -gt 0 ] 
+then
+    echo "Pre-commit Failure : Following files may contain your credential information"
+    git diff --cached --name-status | awk '$1 != "R" { print $2 }' | grep '.pem$\|.ppk$\|.key$'
+    exit -1
+fi
+
+
+diff_files=`git diff --cached --name-status | awk '$1 != "R" { print $2 }'`
+
+# Check whether files contain following  patterns or not.
+
+
+
+#echo $var    
+total_count=`grep -RP '(?<![A-Za-z0-9])[A-Za-z0-9+]{40}(?![A-Za-z0-9])'  $diff_files | wc -l`
+total_c=`grep -RP '(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])' $diff_files | wc -l`
+total_d=`grep -RP '(?<![A-Z0-9])[A-Za-z0-9]{64}(?![A-Z0-9])' $diff_files | wc -l`
+#echo $total_count
+
+if [ $total_count -gt 0 ]
+then
+    echo "Pre-commit Failure : Following files may contain your credential information"
+    grep -RP '(?<![A-Za-z0-9])[A-Za-z0-9+]{40}(?![A-Za-z0-9])'  $diff_files
+    exit -1
+fi
+if [ $total_c -gt 0 ]
+then
+    echo "Pre-commit Failure : Following files may contain your credential information"
+    grep -RP '(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])'  $diff_files
+    exit -1
+fi
+if [ $total_d -gt 0 ]
+then
+    echo "Pre-commit Failure : Following files may contain your credential information"
+    grep -RP '(?<![A-Z0-9])[a-z0-9]{64}(?![A-Z0-9])' $diff_files
+    exit -1
+fi
