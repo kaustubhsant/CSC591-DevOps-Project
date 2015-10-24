@@ -99,7 +99,8 @@ For this goal, we have written a [custom analysis tool](/scripts/custom-analysis
 For this goal, we are changing the build status to failure when
 
    1. any test cases fail
-   2. coverage goes below certain threshold
+   2. coverage goes below certain threshold(like 70%)
+   3. violations are more than 100
 
 and sending an email notification informing the developer to revert the changes.
 
