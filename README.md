@@ -117,12 +117,12 @@ For this goal, we are making following changes
    2. Rejecting the commit if such violations are found by setting exit status.
 
 
-####Screencast for Goal 5
+####Screencast for Goal 6
 
-Rejecting commit while trying to add private key file.
+Rejecting commit while trying to add private key file as shown below.
 
 ![image](/images/Pre-commit.png)
 
-Rejecting commit while trying to file which contains security tokens
+Rejecting commit while trying to file which contains security tokens as shown below.
 
 ![image](/images/Pre-commit2.png)
