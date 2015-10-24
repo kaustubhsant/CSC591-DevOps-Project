@@ -106,3 +106,23 @@ and sending an email notification informing the developer to revert the changes.
 
 ####Screencast for Goal 5
 ![image](/images/M2-test.gif)
+
+
+###Goal 6
+**_The ability to parse a code files and json files in order to detect the presence of AWS/digital ocean security tokens or private ssh keys._**
+
+For this goal, we are making following changes
+
+   1. Creating pre-commit hook which checks for the tokens or private keys in commit diff.
+   2. Rejecting the commit if such violations are found by setting exit status.
+
+
+####Screencast for Goal 5
+
+Rejecting commit while trying to add private key file.
+
+![image](/images/Pre-commit.png)
+
+Rejecting commit while trying to file which contains security tokens
+
+![image](/images/Pre-commit2.png)
