@@ -22,6 +22,17 @@ After the changes are pushed to the git repository, Jenkins terminates existing 
 
 ![image](images/deplyment.gif)
 
+###Goal 3
+**_The ability to use feature flags, serviced by a global redis store, to toggle functionality of a deployed feature in production_**
+
+Run redis server in a docker container
+
+By default the background color of Django application is green
+
+Set the background value in redis to red
+
+After the update in datastore background color of the application changes
+
 ###Goal 4
 **_The ability to monitor the deployed application (using at least 2 metrics) and send alerts using email or SMS (e.g., smtp, mandrill, twilio). An alert can be sent based on some predefined rule._**
 
