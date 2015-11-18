@@ -7,7 +7,7 @@ ksant, abambre, vsnarvek
 ###Goal 1
 **_The ability to configure a production environment automatically, using a configuration management tool, such as ansible, or configured using docker._**
 
-=> To achieve this goal we have created a [DockerFile](scripts/DockerFile_RedisServer) which
+=> To achieve this goal we have created a [DockerFile](scripts/DockerFile_Production) which
 
   - Installs all the dependencies for the project.
   - Fetches the latest application code from Git.
@@ -25,7 +25,7 @@ After the changes are pushed to the git repository, Jenkins terminates existing 
 ###Goal 3
 **_The ability to use feature flags, serviced by a global redis store, to toggle functionality of a deployed feature in production_**
 
-Run redis server in a docker container
+Run redis server in a docker container [DockerFile](scripts/DockerFile_RedisServer)
 
 By default the background color of Django application is green
 
