@@ -7,7 +7,7 @@ ksant, abambre, vsnarvek
 ###Goal 1
 **_The ability to configure a production environment automatically, using a configuration management tool, such as ansible, or configured using docker._**
 
-=> To achieve this goal we have created a Dockerfile which
+=> To achieve this goal we have created a Dockerfile [DockerFile](scripts/DockerFile_RedisServer)which
 
   - Installs all the dependencies for the project.
   - Fetches the latest application code from Git.
