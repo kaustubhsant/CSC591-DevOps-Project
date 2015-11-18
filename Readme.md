@@ -16,7 +16,7 @@ ksant, abambre, vsnarvek
 ###Goal 2
 **_The ability to deploy software to the production environment triggered after build, testing, and analysis stage is completed. The deployment needs to occur on actual remote machine/VM (e.g. AWS, droplet, VCL), and not a local VM_**
 
-Jenkin's post build deployment script [Jenkins_deployment](scripts/jenkins_post_build_deployment.sh) and [Docker Update](scripts/docker_update_image.sh) completes this goal. We have build and pushed the image in the docker hub repository
+Jenkin's post build deployment script [Jenkins_deployment](scripts/jenkins_post_build_deployment.sh) and [Docker Update](scripts/docker_update_image.sh) completes this goal. We have build and pushed the application image in the docker hub repository which can fetch latest code changes at the start.
 
 After the changes are pushed to the git repository, Jenkins terminates existing docker instance running on the digital ocean droplet and spawns new instance which has code changes deployed.
 
