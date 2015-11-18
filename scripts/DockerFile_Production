@@ -1,0 +1,23 @@
+FROM ubuntu:latest
+MAINTAINER Vishakha Narvekar, vsnarvek@ncsu.edu
+
+RUN apt-get -y update
+RUN apt-get install python python-pip -y
+RUN apt-get install git -y
+RUN apt-get install python-django redis-server -y
+RUN service redis-server stop
+
+RUN pip install redis
+
+RUN mkdir -p /src/hello-django-app
+
+#Copy application source code
+RUN git clone  https://github.com/vish4/hello-django-app.git /src/hello-django-app
+
+CMD ["cd", "/src/hello-django-app/mysite"]
+
+CMD ["git", "pull"]
+
+EXPOSE  8000
+
+CMD  ["python" , "/src/hello-django-app/mysite/manage.py", "runserver" , "0.0.0.0:8000"]
