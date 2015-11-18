@@ -33,6 +33,8 @@ Set the background value in redis to red
 
 After the update in datastore background color of the application changes
 
+![images](https://cloud.githubusercontent.com/assets/13971455/11229498/d272dc88-8d63-11e5-9dac-4d1741e4a752.gif)
+
 ###Goal 4
 **_The ability to monitor the deployed application (using at least 2 metrics) and send alerts using email or SMS (e.g., smtp, mandrill, twilio). An alert can be sent based on some predefined rule._**
 
