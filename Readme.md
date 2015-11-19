@@ -40,3 +40,23 @@ The [monitor.sh](scripts/monitor.sh) and [sendmail.py](scripts/sendmail.py) code
 The [monitor.sh](scripts/monitor.sh) checks the disk usage and memory usage and logs them every 2 seconds. If the disk usage exceeds set threshold of 70% or memory usage exceeds 50%, an email alert is sent. It also removes the corresponding entry for *canary* from the global redis store so that the proxy server will stop all traffic to this canary release. 
 
 ![image](images/alert.png)
+
+###Goal 5
+**_The ability to perform a canary release: Using a proxy/load balancer server, route a percentage of traffic to a newly staged version of software and remaining traffic to a stable version of software. Stop routing traffic to canary if alert is raised._**
+
+To demonstrate this we have following setup:
+
+The [proxy_server](scripts/proxy_server.js) is creates to route 75% traffic to stable production server , 25 % newly staged canary server.
+
+The [monitor.sh](scripts/monitor.sh) checks the disk usage and memory usage and logs them every 2 seconds. If the disk usage exceeds set threshold of 70% or memory usage exceeds 50%, an email alert is sent. It also removes the corresponding entry for *canary* from the global redis store so that the proxy server will stop all traffic to this canary release. 
+
+In following demonstration we have following setup,
+  - Proxy/load balancer server running at http://104.131.206.44:4000/ 
+  - Canary docker server running at http://104.131.206.44:8082
+  - Production server running at http://104.131.206.44:8081
+
+It describes : 
+  1. Redirection of requeste to this setup
+  2. When alert is raised stop the traffic to the canary server
+    
+![image](images/goal5.gif)
