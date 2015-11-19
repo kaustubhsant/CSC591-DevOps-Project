@@ -13,7 +13,7 @@ with open("config/config.json",'r') as cfg:
 
 host = os.getenv('DB_PORT_6379_TCP_ADDR')
 rserver = redis.StrictRedis(host=host,port=6379)
-rserver.lrem('server',1,"canary")
+rserver.lrem('server-ips',1,'http://0.0.0.0:8082')
 
 # Open a plain text file for reading.  For this example, assume that
 # the text file contains only ASCII characters.
