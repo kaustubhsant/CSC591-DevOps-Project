@@ -1,0 +1,9 @@
+
+# These commands used to run docker containers and linking it to redis datastore.
+
+docker run --name redis_db -d -p 6379:6379 vsnarvek/milestone3_redis
+
+docker run --name prod_server --link redis_db:db -d -p 8081:8000 vsnarvek/milestone3
+
+docker run --name canary_server --link redis_db:db -d -p 8082:8000 vsnarvek/milestone3
+
