@@ -28,7 +28,7 @@ After the changes are pushed to the git repository and build and test passes, Je
 
 For this goal we have a redis server running in a docker container [DockerFile](scripts/DockerFile_RedisServer). The web application gets the value from the redis db and sets the background color of the webpage accordingly. 
 
-By default the background color of Django application is *green. Now we change the value in redis and set background value to *red.
+By default the background color of Django application is *green*. Now we change the value in redis and set background value to *red*.
 After the update in redis datastore, the background color of the application webpage changes.
 
 ![images](images/feature-flag.gif)
