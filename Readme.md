@@ -48,6 +48,7 @@ To demonstrate this we have following setup:
 
 The [proxy_server](scripts/proxy_server.js) is creates to route 75% traffic to stable production server , 25 % newly staged canary server.
 
+The application on production server has webpage background set to *red* and on canary server set to *green*.
 The [monitor.sh](scripts/monitor.sh) checks the disk usage and memory usage and logs them every 2 seconds. If the disk usage exceeds set threshold of 70% or memory usage exceeds 50%, an email alert is sent. It also removes the corresponding entry for *canary* from the global redis store so that the proxy server will stop all traffic to this canary release. 
 
 In following demonstration we have following setup,
