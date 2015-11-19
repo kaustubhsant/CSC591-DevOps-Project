@@ -7,33 +7,31 @@ ksant, abambre, vsnarvek
 ###Goal 1
 **_The ability to configure a production environment automatically, using a configuration management tool, such as ansible, or configured using docker._**
 
-=> To achieve this goal we have created a [DockerFile](scripts/DockerFile_Production) which
+To achieve this goal we have created a [DockerFile](scripts/DockerFile_Production) which
 
   - Installs all the dependencies for the project.
   - Fetches the latest application code from Git.
   - Runs the Django application [App](https://github.com/vish4/hello-django-app).
+  - Runs the monitoring script.
 
 ###Goal 2
 **_The ability to deploy software to the production environment triggered after build, testing, and analysis stage is completed. The deployment needs to occur on actual remote machine/VM (e.g. AWS, droplet, VCL), and not a local VM_**
 
-Jenkin's post build deployment script [Jenkins_deployment](scripts/jenkins_post_build_deployment.sh) and [Docker Update](scripts/docker_update_image.sh) completes this goal. We have build and pushed the application image in the docker hub repository which can fetch latest code changes at the start.
+Jenkin's post build deployment script [Jenkins_deployment](scripts/jenkins_post_build_deployment.sh) and [Docker Update](scripts/docker_update_image.sh) completes this goal. We have build and pushed the application image in the docker hub repository. The docker instance fetches latest code changes at the start.
 
-After the changes are pushed to the git repository, Jenkins terminates existing docker instance running on the digital ocean droplet and spawns new instance which has code changes deployed.
+After the changes are pushed to the git repository and build and test passes, Jenkins terminates existing docker instance running on the digital ocean droplet and spawns new instance pulling the docker application image already pushed in hub repository, which has the code changes deployed.
 
 ![image](images/deplyment.gif)
 
 ###Goal 3
 **_The ability to use feature flags, serviced by a global redis store, to toggle functionality of a deployed feature in production_**
 
-Run redis server in a docker container [DockerFile](scripts/DockerFile_RedisServer)
+For this goal we have a redis server running in a docker container [DockerFile](scripts/DockerFile_RedisServer). The web application gets the value from the redis db and sets the background color of the webpage accordingly. 
 
-By default the background color of Django application is green
+By default the background color of Django application is *green. Now we change the value in redis and set background value to *red.
+After the update in redis datastore, the background color of the application webpage changes.
 
-Set the background value in redis to red
-
-After the update in datastore background color of the application changes
-
-![images](https://cloud.githubusercontent.com/assets/13971455/11229498/d272dc88-8d63-11e5-9dac-4d1741e4a752.gif)
+![images](images/feature-flag.gif)
 
 ###Goal 4
 **_The ability to monitor the deployed application (using at least 2 metrics) and send alerts using email or SMS (e.g., smtp, mandrill, twilio). An alert can be sent based on some predefined rule._**
