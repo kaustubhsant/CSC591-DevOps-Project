@@ -7,10 +7,10 @@ Building a complete end-to-end DevOps pipeline consisting of a build component, 
 
 
 #Build component
-The Build component details, script files can be found on [Build Component](https://github.com/kaustubhsant/CSC591-DevOps-Project/tree/M1-build).
+The Build component details, script files can be found on [Build branch](https://github.com/kaustubhsant/CSC591-DevOps-Project/tree/M1-build).
 
 #Test and Analysis component
-The Test and Analysis component details, script files can be found on [Test and Analysis Component](https://github.com/kaustubhsant/CSC591-DevOps-Project/tree/M2-test).
+The Test and Analysis component details, script files can be found on [Test and Analysis branch](https://github.com/kaustubhsant/CSC591-DevOps-Project/tree/M2-test).
 
 #Deployment component
-The Deployment component details, script files can be found on [Deployment](https://github.com/kaustubhsant/CSC591-DevOps-Project/tree/M3-Deployment).
+The Deployment component details, script files can be found on [Deployment branch](https://github.com/kaustubhsant/CSC591-DevOps-Project/tree/M3-Deployment).
