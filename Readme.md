@@ -15,11 +15,13 @@ To achieve this goal we have created a Conformity Monkey which scans for the ins
 
 ScreenCast of demonstration:
 
+![image](images/conformity_check1.gif)
+
 ![image](images/conformity_check1.png)
 
-![image](images/check1.png)
-
 ![image](images/check2.png)
+
+![image](images/check3.png)
 
 
 
