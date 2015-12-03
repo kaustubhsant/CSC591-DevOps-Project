@@ -1,2 +1,1 @@
-52.10.239.6
-52.34.50.96
+#Add list of instances here
