@@ -1,6 +1,10 @@
 #Team
 
-ksant, abambre, vsnarvek
+Kaustubh Sant - ksant
+
+Aditya Ambre - abambre
+
+Vishaka Narvekar - vsnarvek
 
 #Project Aim
 Building a complete end-to-end DevOps pipeline consisting of a build component, a testing and analysis component, a deployment component for an application.
